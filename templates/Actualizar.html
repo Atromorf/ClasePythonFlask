@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Inicio</title>
+        <link rel="stylesheet" href="../static/font.css">
+    </head>
+    <body>
+        {% extends 'layout.html' %}
+        {% block body %}
+
+        <section class="agregando">
+            <h4>Agrega Album</h4>
+            <form action="/update/{{ album.0 }}" method="POST">
+            <input class="controls" type="text" name="txtalbum" placeholder="Album" value="{{ album.1 }}">
+            <input class="controls" type="text" name="txtartista" placeholder="Artista" value="{{ album.2 }}">
+            <input class="controls" type="number" name="txtanio" placeholder="Anio" value="{{ album.3 }}">
+    
+    <button class="botons" type="submit">Guardar datos</button>
+
+</section>
+
+</form>
+        {% endblock %}
+</body>
+</html>

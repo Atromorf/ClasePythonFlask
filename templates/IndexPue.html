@@ -1,0 +1,54 @@
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+        <script>
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: '{{ message }}',
+                showConfirmButton: false,
+                timer: 3000
+            })
+        </script>
+
+    {% endfor %}
+{% endif %}
+{% endwith %}
+
+<section class="insertando">
+    <h4>Inserta Pueblo</h4>
+<form action="/insertar" method="POST">
+<div><p><input class="controls" type="text" name="txtid" placeholder="Escribe el id del Pueblo"></p></div>
+<div><p><input class="controls" type="text" name="txtestado" placeholder="Escribe el Estado"></p></div>
+<div><p><input class="controls" type="text" name="txtpueblo" placeholder="Escribe el Pueblo"></p></div>
+
+<button class="botons" type="submit" value="Guardar datos">Guardar Datos</button>
+</form>
+</section>
+
+<section class="tabla">
+    <table>
+        <thead>
+            <tr>
+                <td>Estado: </td>
+                <td>Pueblo: </td>
+                <td>Opciones: </td>
+            </tr>
+        </thead>
+    
+        <tbody>
+            {%for consulta in PueblosMagicos%}
+            <tr>
+                <td>{{ consulta.1 }}</td>
+                <td>{{ consulta.2 }}</td>
+                <td>{{ consulta.3 }}</td>
+                <td>
+                    <a href="/editar/{{ consulta.0 }}"><button type="button" class="btn btn-primary">Editar</button></a>
+                    <a href="/eliminar/{{ consulta.0 }}"><button type="button" class="btn btn-danger">Eliminar</button></a>
+                </td>
+            </tr>
+            {%endfor%}
+    
+    </table>
+    
+    </section>

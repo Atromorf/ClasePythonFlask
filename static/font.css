@@ -1,0 +1,75 @@
+body{
+    background-color: red;
+    background-image: url(https://p4.wallpaperbetter.com/wallpaper/282/278/373/artistic-neon-hd-wallpaper-preview.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.agregando{
+    width: 400px;
+    background: red;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+.agregando h4{
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.controls{
+    width: 100%;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+
+.agregando .botons{
+    width: 100%;
+    background: black;
+    padding: 10px;
+    color: aliceblue;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;    
+}
+
+
+table {  color: rgb(250, 243, 243); 
+    font-family: Helvetica, Arial, sans-serif; 
+    width: 640px; border-collapse: collapse;
+    margin: 40px auto;
+}
+
+td, th { border: 1px solid transparent; height: 30px; }
+
+th { background: #2b2a2a; font-weight: bold; }
+
+td { background: #4d4b4b; text-align: center; }
+
+tr:nth-child(even) td { background: #5c5b5b; }  
+
+tr:nth-child(odd) td { background: #4e4d4d; } 
+
+tr td:hover { background: #666; color: #FFF; }
+
+
+
